@@ -1,105 +1,963 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Votaciones electrónicas, sonido profesional, videobeam, grabación y refrigerios para asambleas en Bogotá y Cundinamarca.">
-<title>Asambleas & Votaciones | Ing. Sergio Ramírez</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#071b35;--blue:#1769e8;--cyan:#24d4d0;--ink:#10243e;--muted:#63748b;--light:#f4f8fc;--line:#e4ebf3}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:16px/1.6 "DM Sans",sans-serif}a{text-decoration:none;color:inherit}.container{width:min(1140px,calc(100% - 40px));margin:auto}
-.top{background:#041326;color:#d6e5f6;font-size:13px;padding:8px 0}.top .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-nav{position:sticky;top:0;z-index:9;background:#071b35f7;color:white}.nav{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:16px}.brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-  .brand img {
-  display: block;
-  width: 190px;
-  height: 65px;
-  object-fit: contain;
-  object-position: left center;
-  background: white;
-  border-radius: 8px;}.brand b{display:inline-grid;place-items:center;background:var(--cyan);color:var(--navy);border-radius:12px;width:40px;height:40px;margin-right:8px}.brand small{display:block;color:#a9bed4;font:500 10px "DM Sans";letter-spacing:1.5px;margin-left:50px;margin-top:-7px}.links{display:flex;gap:20px;font-size:14px;font-weight:700}.links a:hover{color:var(--cyan)}.btn{display:inline-block;background:linear-gradient(135deg,var(--blue),#3189ff);color:white;padding:12px 18px;border-radius:11px;font-weight:700;font-size:14px;box-shadow:0 9px 22px #1769e83b;transition:.25s}.btn:hover{transform:translateY(-3px)}.outline{background:#ffffff12;border:1px solid #ffffff55;box-shadow:none}.toggle{display:none;background:none;border:0;color:white;font-size:26px}
-.hero{background:linear-gradient(105deg,#041326f5,#071b35dc 60%,#071b3590),url("sonido-profesional.webp") center/cover;color:white;padding:86px 0}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:45px}.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.16;letter-spacing:-.5px}h1{font-size:clamp(38px,5vw,59px);margin:17px 0}h1 em{color:var(--cyan);font-style:normal}.hero p{color:#c6d6e8;font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.points{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;margin-top:26px;color:#d9e7f5}.points b{color:var(--cyan)}.hero-photo{position:relative}.hero-photo img{width:100%;height:345px;object-fit:cover;border-radius:22px;border:1px solid #ffffff55;box-shadow:0 25px 60px #0006}.float{position:absolute;bottom:-16px;left:-12px;background:white;color:var(--ink);padding:13px 17px;border-radius:13px;font-weight:800}.float small{display:block;color:var(--muted);font-weight:500}
-.trust{background:#f5f9fd;border-bottom:1px solid var(--line)}.trust .container{display:grid;grid-template-columns:repeat(3,1fr);padding:22px 0;text-align:center;font-size:14px;font-weight:700;color:#35506e}.trust b{color:var(--blue);font-size:20px;margin-right:8px}
-section{padding:76px 0}.heading{text-align:center;max-width:720px;margin:0 auto 40px}.heading .eyebrow{color:var(--blue)}h2{font-size:clamp(29px,4vw,42px);color:var(--navy);margin:12px 0}.heading p{color:var(--muted);margin:0}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{position:relative;padding:26px;border:1px solid var(--line);border-radius:19px;background:white;box-shadow:0 8px 25px #071b3509;transition:.3s}.card:hover{transform:translateY(-6px);box-shadow:0 18px 45px #071b351a}.num{position:absolute;right:20px;top:14px;color:#edf1f6;font:800 30px Manrope}.ico{width:50px;height:50px;border-radius:14px;background:#edf5ff;color:var(--blue);display:grid;place-items:center;font-size:23px;margin-bottom:17px}.card h3{font-size:19px;color:var(--navy);margin:0 0 9px}.card p{font-size:14px;color:var(--muted);margin:0}.primary{background:linear-gradient(145deg,#0b2b50,#071b35)}.primary h3{color:white}.primary p{color:#c0d0e2}.primary .ico{background:#24d4d01c;color:var(--cyan)}.primary .num{color:#ffffff18}
-.workflow{background:var(--light)}.workflow-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:35px;align-items:center}.workflow-copy p{color:var(--muted)}.workflow-copy ul{padding-left:20px;color:#29425f;font-size:14px}.map{background:white;padding:12px;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 45px #071b351a}.map img{width:100%;display:block;border-radius:12px;max-height:720px;object-fit:contain}.caption{font-size:12px;color:var(--muted);padding:8px 3px 0}
-.places{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.place{padding:14px;border:1px solid var(--line);border-radius:12px;background:#fbfdff;font-size:14px;font-weight:700;color:#29425f}.place b{color:#0aa7a3;margin-right:7px}
-.gallery{background:var(--navy);color:white}.gallery h2{color:white}.gallery .heading p{color:#bdcfe2}.gallery .heading .eyebrow{color:var(--cyan)}.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.gallery-card{overflow:hidden;border-radius:17px;background:#102f52;border:1px solid #ffffff20}.gallery-card img{width:100%;height:280px;object-fit:cover;display:block}.gallery-card div{padding:16px 18px}.gallery-card p{font-size:13px;color:#bdcfe2;margin:5px 0 0}
-.cta{background:linear-gradient(110deg,#0b2d53,#0b4a78);color:white;padding:58px 0}.cta .container{display:flex;justify-content:space-between;align-items:center;gap:24px}.cta h2{color:white;margin:0 0 8px}.cta p{color:#c5d8ea;margin:0}.cta .btn{background:linear-gradient(135deg,var(--cyan),#7ce9df);color:#06223d;white-space:nowrap}
-.contact{background:#f5f9fd}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}.contact-info{background:var(--navy);color:white;border-radius:19px;padding:29px}.contact-info h3{font-size:23px;margin:0 0 8px}.contact-info p,.contact-action p{color:#bdd0e3;font-size:14px}.detail{display:flex;gap:12px;align-items:center;margin-top:19px}.detail b{width:39px;height:39px;border-radius:12px;background:#24d4d01e;color:var(--cyan);display:grid;place-items:center}.detail small{display:block;color:#a8bdd3}.detail strong{font-size:14px}.contact-action{background:white;border:1px solid var(--line);border-radius:19px;padding:30px}.contact-action h3{margin:0 0 9px}.contact-action p{color:var(--muted)}.contact-action .btn{display:block;text-align:center;background:#19b86b;box-shadow:none}
-footer{background:#041326;color:#9fb3c9;padding:22px 0;font-size:12px}.footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}.reveal{opacity:0;transform:translateY(20px);transition:.7s}.reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){.hero-grid,.workflow-grid{grid-template-columns:1fr}.hero-photo{max-width:620px}.services{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:650px){.container{width:calc(100% - 32px)}.toggle{display:block}.nav-cta{display:none}.links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:20px 24px;flex-direction:column;z-index:10}.links.open{display:flex}.hero{padding:58px 0}.hero-grid{gap:32px}h1{font-size:39px}.hero p{font-size:15px}.hero-photo img{height:250px}.trust .container{grid-template-columns:1fr;text-align:left;gap:10px}section{padding:58px 0}.services,.places,.gallery-grid,.contact-grid{grid-template-columns:1fr}.gallery-card img{height:225px}.cta .container{align-items:flex-start;flex-direction:column}.cta .btn{width:100%;text-align:center}.footer{justify-content:center;text-align:center}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
-</style></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Asambleas Integral: votaciones electrónicas, sonido profesional, videobeam, grabación y refrigerios para asambleas en Bogotá y Cundinamarca.">
+  <meta name="theme-color" content="#071b35">
+  <title>Asambleas Integral | Soluciones para propiedad horizontal</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =====================================================
+       1. VARIABLES Y ESTILOS GENERALES
+    ===================================================== */
+    :root {
+      --navy: #071b35;
+      --navy-dark: #041326;
+      --blue: #1769e8;
+      --cyan: #24d4d0;
+      --ink: #10243e;
+      --muted: #63748b;
+      --light: #f4f8fc;
+      --line: #e4ebf3;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font: 16px/1.6 "DM Sans", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1140px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      font-family: Manrope, sans-serif;
+      line-height: 1.16;
+      letter-spacing: -.5px;
+    }
+
+    /* =====================================================
+       2. FRANJA SUPERIOR Y NAVEGACIÓN
+    ===================================================== */
+    .top {
+      padding: 8px 0;
+      background: var(--navy-dark);
+      color: #d6e5f6;
+      font-size: 13px;
+    }
+
+    .top .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 9;
+      background: #071b35f7;
+      color: white;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 16px;
+    }
+
+    /* Logo: tamaño limitado para que no agrande el encabezado */
+    .brand {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+      line-height: 0;
+    }
+
+    .brand img {
+      display: block;
+      width: 150px;
+      height: 58px;
+      max-width: 150px;
+      object-fit: contain;
+      object-position: left center;
+      background: #fff;
+      border-radius: 7px;
+      padding: 2px 5px;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .links a:hover { color: var(--cyan); }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--blue), #3189ff);
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 9px 22px #1769e83b;
+      transition: transform .25s;
+    }
+
+    .btn:hover { transform: translateY(-3px); }
+
+    .outline {
+      background: #ffffff12;
+      border: 1px solid #ffffff55;
+      box-shadow: none;
+    }
+
+    .toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* =====================================================
+       3. PORTADA PRINCIPAL
+    ===================================================== */
+    .hero {
+      padding: 86px 0;
+      background:
+        linear-gradient(105deg, #041326f5, #071b35dc 60%, #071b3590),
+        url("sonido-profesional.webp") center/cover;
+      color: white;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 17px 0;
+      font-size: clamp(38px, 5vw, 59px);
+    }
+
+    h1 em {
+      color: var(--cyan);
+      font-style: normal;
+    }
+
+    .hero p {
+      color: #c6d6e8;
+      font-size: 17px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 26px;
+      color: #d9e7f5;
+      font-size: 13px;
+    }
+
+    .points b { color: var(--cyan); }
+
+    .hero-photo { position: relative; }
+
+    .hero-photo img {
+      width: 100%;
+      height: 345px;
+      object-fit: cover;
+      border: 1px solid #ffffff55;
+      border-radius: 22px;
+      box-shadow: 0 25px 60px #0006;
+    }
+
+    .float {
+      position: absolute;
+      bottom: -16px;
+      left: -12px;
+      padding: 13px 17px;
+      border-radius: 13px;
+      background: white;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .float small {
+      display: block;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* =====================================================
+       4. FRANJA DE CONFIANZA
+    ===================================================== */
+    .trust {
+      border-bottom: 1px solid var(--line);
+      background: #f5f9fd;
+    }
+
+    .trust .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 22px 0;
+      color: #35506e;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .trust b {
+      margin-right: 8px;
+      color: var(--blue);
+      font-size: 20px;
+    }
+
+    /* =====================================================
+       5. SECCIONES Y TÍTULOS
+    ===================================================== */
+    section { padding: 76px 0; }
+
+    .heading {
+      max-width: 720px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .heading .eyebrow { color: var(--blue); }
+
+    h2 {
+      margin: 12px 0;
+      color: var(--navy);
+      font-size: clamp(29px, 4vw, 42px);
+    }
+
+    .heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* =====================================================
+       6. SERVICIOS
+    ===================================================== */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      position: relative;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      background: white;
+      box-shadow: 0 8px 25px #071b3509;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 45px #071b351a;
+    }
+
+    .num {
+      position: absolute;
+      top: 14px;
+      right: 20px;
+      color: #edf1f6;
+      font: 800 30px Manrope, sans-serif;
+    }
+
+    .ico {
+      display: grid;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 17px;
+      place-items: center;
+      border-radius: 14px;
+      background: #edf5ff;
+      color: var(--blue);
+      font-size: 23px;
+    }
+
+    .card h3 {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-size: 19px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .primary {
+      background: linear-gradient(145deg, #0b2b50, var(--navy));
+    }
+
+    .primary h3 { color: white; }
+    .primary p { color: #c0d0e2; }
+    .primary .ico { background: #24d4d01c; color: var(--cyan); }
+    .primary .num { color: #ffffff18; }
+
+    /* =====================================================
+       7. CÓMO TRABAJAMOS
+    ===================================================== */
+    .workflow { background: var(--light); }
+
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .workflow-copy p { color: var(--muted); }
+
+    .workflow-copy ul {
+      padding-left: 20px;
+      color: #29425f;
+      font-size: 14px;
+    }
+
+    .map {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: white;
+      box-shadow: 0 18px 45px #071b351a;
+    }
+
+    .map img {
+      display: block;
+      width: 100%;
+      max-height: 720px;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+
+    .caption {
+      padding: 8px 3px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =====================================================
+       8. EXPERIENCIA
+    ===================================================== */
+    .places {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .place {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fbfdff;
+      color: #29425f;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .place b {
+      margin-right: 7px;
+      color: #0aa7a3;
+    }
+
+    /* =====================================================
+       9. GALERÍA
+    ===================================================== */
+    .gallery {
+      background: var(--navy);
+      color: white;
+    }
+
+    .gallery h2 { color: white; }
+    .gallery .heading p { color: #bdcfe2; }
+    .gallery .heading .eyebrow { color: var(--cyan); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-card {
+      overflow: hidden;
+      border: 1px solid #ffffff20;
+      border-radius: 17px;
+      background: #102f52;
+    }
+
+    .gallery-card img {
+      display: block;
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .gallery-card div { padding: 16px 18px; }
+
+    .gallery-card p {
+      margin: 5px 0 0;
+      color: #bdcfe2;
+      font-size: 13px;
+    }
+
+    /* =====================================================
+       10. CONTACTO
+    ===================================================== */
+    .contact { background: #f5f9fd; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 20px;
+    }
+
+    .contact-info {
+      padding: 29px;
+      border-radius: 19px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .contact-info h3 {
+      margin: 0 0 8px;
+      font-size: 23px;
+    }
+
+    .contact-info p,
+    .contact-action p {
+      color: #bdd0e3;
+      font-size: 14px;
+    }
+
+    .detail {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 19px;
+    }
+
+    .detail b {
+      display: grid;
+      flex: 0 0 39px;
+      width: 39px;
+      height: 39px;
+      place-items: center;
+      border-radius: 12px;
+      background: #24d4d01e;
+      color: var(--cyan);
+    }
+
+    .detail small {
+      display: block;
+      color: #a8bdd3;
+    }
+
+    .detail strong { font-size: 14px; }
+    .detail a { overflow-wrap: anywhere; }
+
+    .contact-action {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      background: white;
+    }
+
+    .contact-action h3 { margin: 0 0 9px; }
+    .contact-action p { color: var(--muted); }
+
+    .contact-action .btn {
+      display: block;
+      background: #19b86b;
+      box-shadow: none;
+      text-align: center;
+    }
+
+    /* =====================================================
+       11. PIE DE PÁGINA Y ANIMACIONES
+    ===================================================== */
+    footer {
+      padding: 22px 0;
+      background: var(--navy-dark);
+      color: #9fb3c9;
+      font-size: 12px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: .7s;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* =====================================================
+       12. DISEÑO RESPONSIVE
+    ===================================================== */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .workflow-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo { max-width: 620px; }
+      .services { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 650px) {
+      .container { width: calc(100% - 32px); }
+
+      .nav { min-height: 70px; }
+      .brand img {
+        width: 132px;
+        height: 52px;
+        max-width: 132px;
+      }
+
+      .toggle { display: block; }
+      .nav-cta { display: none; }
+
+      .links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        display: none;
+        flex-direction: column;
+        padding: 20px 24px;
+        background: var(--navy);
+      }
+
+      .links.open { display: flex; }
+
+      .hero { padding: 58px 0; }
+      .hero-grid { gap: 32px; }
+      h1 { font-size: 39px; }
+      .hero p { font-size: 15px; }
+      .hero-photo img { height: 250px; }
+
+      .trust .container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: left;
+      }
+
+      section { padding: 58px 0; }
+
+      .services,
+      .places,
+      .gallery-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-card img { height: 225px; }
+
+      .footer {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
 <body>
-<div class="top"><div class="container"><span>⌖ Bogotá D.C. y Cundinamarca</span><span>☎ 314 623 3493 · Atención para asambleas</span></div></div>
-<nav><div class="container nav"><a class="brand" href="#inicio" aria-label="Asambleas Integral"><img src="logo-asambleas-integral.png" alt="Logo Asambleas Integral"></a>
-<button class="toggle" id="toggle" aria-label="Abrir menú" aria-expanded="false">☰</button><div class="links" id="links"><a href="#servicios">Servicios</a><a href="#flujo">Cómo trabajamos</a><a href="#experiencia">Experiencia</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></div><a class="btn nav-cta" href="https://wa.me/573146233493?text=Hola,%20quiero%20cotizar%20mi%20asamblea" target="_blank" rel="noopener">Solicitar cotización ↗</a></div></nav>
-<header class="hero" id="inicio"><div class="container hero-grid"><div class="reveal"><div class="eyebrow">Asambleas de propiedad horizontal</div><h1>Su asamblea, con tecnología y <em>respaldo profesional.</em></h1><p>Votaciones electrónicas, sonido profesional y soluciones audiovisuales para reuniones organizadas, claras y eficientes.</p><div class="actions"><a class="btn" href="https://wa.me/573146233493?text=Hola,%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20una%20asamblea" target="_blank" rel="noopener">Cotizar por WhatsApp ↗</a><a class="btn outline" href="#servicios">Conocer servicios ↓</a></div><div class="points"><span><b>✓</b> Más de 3 años de experiencia</span><span><b>✓</b> Sistema de votación disponible</span><span><b>✓</b> Bogotá y Cundinamarca</span></div></div><div class="hero-photo reveal"><img src="sonido-profesional.webp" alt="Montaje de sonido profesional para una asamblea"><div class="float">Soluciones integrales<small>Un solo equipo para su evento</small></div></div></div></header>
-<div class="trust"><div class="container"><div><b>◉</b> Votación electrónica</div><div><b>♫</b> Sonido y proyección</div><div><b>✓</b> Experiencia en asambleas</div></div></div>
-<section id="servicios"><div class="container"><div class="heading reveal"><div class="eyebrow">Nuestros servicios</div><h2>Todo lo que su asamblea necesita.</h2><p>Puede contratar los servicios de manera integral o elegir los apoyos que requiere su copropiedad.</p></div><div class="services">
-<article class="card primary reveal"><span class="num">01</span><div class="ico">▤</div><h3>Votaciones electrónicas</h3><p>Sistema de votación para asambleas con voto por cada unidad privada, resultados expresados en porcentajes e informe específico de las votaciones realizadas.</p></article>
-<article class="card reveal"><span class="num">02</span><div class="ico">♫</div><h3>Sonido profesional</h3><p>Alquiler de torres de sonido y micrófonos para los asistentes y el moderador, con apoyo durante el desarrollo de la asamblea.</p></article>
-<article class="card reveal"><span class="num">03</span><div class="ico">▣</div><h3>Videobeam y proyección</h3><p>Proyecte sus diapositivas, informes administrativos, documentos y resultados de las votaciones para que todos puedan seguir la reunión.</p></article>
-<article class="card reveal"><span class="num">04</span><div class="ico">◉</div><h3>Grabación de la asamblea</h3><p>Registro en video de la asamblea como respaldo audiovisual y apoyo para la consulta posterior del desarrollo del evento.</p></article>
-<article class="card reveal"><span class="num">05</span><div class="ico">☕</div><h3>Estación de café y refrigerios</h3><p>Consulte nuestras opciones de estación de café y refrigerios para brindar comodidad a los asistentes durante la jornada.</p></article>
-<article class="card reveal"><span class="num">06</span><div class="ico">✦</div><h3>Acompañamiento técnico</h3><p>Coordinación y apoyo en los servicios contratados para contribuir a que cada recurso esté listo durante la asamblea.</p></article>
-</div></div></section>
-<section class="workflow" id="flujo"><div class="container workflow-grid"><div class="workflow-copy reveal"><div class="eyebrow" style="color:#1769e8">Organización del evento</div><h2>Así se desarrolla una asamblea.</h2><p>Planeamos la distribución de los espacios y el recorrido de los participantes para facilitar el ingreso, registro, ubicación y desarrollo de la reunión.</p><ul><li>Ingreso y check-in de los asambleístas.</li><li>Mesa de registro y orientación de asistentes.</li><li>Mesa de administración y moderador.</li><li>Proyección de información y resultados.</li><li>Punto de control de votaciones y sonido principal.</li></ul><p><strong>Una operación coordinada ayuda a que cada asistente sepa dónde dirigirse y cada equipo cumpla su función.</strong></p></div><div class="map reveal"><img src="mapa-general-asamblea.jpeg" alt="Mapa general de distribución y flujo de asistentes en una asamblea"><div class="caption">Mapa general ilustrativo de la distribución de una asamblea y el flujo de sus asistentes.</div></div></div></section>
-<section id="experiencia"><div class="container"><div class="heading reveal"><div class="eyebrow">Experiencia en propiedad horizontal</div><h2>Asambleas que hemos acompañado.</h2><p>Hemos prestado nuestros servicios en diferentes conjuntos y proyectos residenciales. Agradecemos la confianza depositada en nuestro trabajo.</p></div><div class="places">
-<div class="place reveal"><b>✓</b> Parque Residencial Surbana IV</div><div class="place reveal"><b>✓</b> Conjunto Residencial Piedra Ancha</div><div class="place reveal"><b>✓</b> Conjunto Residencial Mirador de Castilla II</div><div class="place reveal"><b>✓</b> Conjunto Residencial Valles de Ipanema</div><div class="place reveal"><b>✓</b> Conjunto Residencial Parques de Timiza</div><div class="place reveal"><b>✓</b> Conjunto Residencial Nueva Santa Isabel, etapas I y II</div><div class="place reveal"><b>✓</b> Cumbres de San Mateo</div><div class="place reveal"><b>✓</b> Parques de la Estación</div><div class="place reveal"><b>✓</b> Conjunto Residencial Portal Américas H</div>
-</div></div></section>
-<section class="gallery" id="galeria"><div class="container"><div class="heading reveal"><div class="eyebrow">Experiencias con nosotros</div><h2>El respaldo también se ve.</h2><p>Imágenes de nuestros montajes y de la organización de los espacios para asambleas.</p></div>
-<div class="gallery-grid">
-  <article class="gallery-card reveal"><img src="sonido-profesional.webp" alt="Montaje real de sonido profesional"><div><strong>Montaje de sonido profesional</strong><p>Torres de sonido, micrófonos y consola para el desarrollo de la asamblea.</p></div></article>
-  <article class="gallery-card reveal"><img src="mapa-general-asamblea.jpeg" alt="Mapa general del flujo de una asamblea"><div><strong>Planeación y flujo de asistentes</strong><p>Organización de ingreso, registro, moderación y apoyo técnico.</p></div></article>
-  <article class="gallery-card reveal"><img src="pepito.jpeg" alt="Fotografía de una experiencia de asamblea"><div><strong>Experiencia en asambleas</strong><p>Registro fotográfico de nuestros servicios y montajes.</p></div></article>
-  <article class="gallery-card reveal"><img src="pepita.jpg" alt="Fotografía de una experiencia de asamblea"><div><strong>Servicio para copropiedades</strong><p>Momentos de trabajo y acompañamiento durante las asambleas.</p></div></article>
-</div>
-</div></section>
-
-<section class="contact" id="contacto"><div class="container"><div class="heading reveal"><div class="eyebrow">Contacto</div><h2>Hablemos de su próxima asamblea.</h2><p>Atendemos conjuntos y copropiedades en Bogotá D.C. y Cundinamarca.</p></div><div class="contact-grid">
-<div class="contact-info reveal"><h3>Atención personalizada</h3><p>Conozca nuestros servicios y consulte disponibilidad para su evento.</p><div class="detail"><b>✆</b><div><small>Teléfono y WhatsApp</small><strong>314 623 3493</strong></div></div><div class="detail"><b>⌖</b><div><small>Cobertura</small><strong>Bogotá D.C. y Cundinamarca</strong></div></div>
-<div class="detail">
-  <b>✉</b>
-  <div>
-    <small>Correo electrónico</small>
-    <strong>
-      <a href="mailto:asambleas.integral@gmail.com">
-        asambleas.integral@gmail.com
-      </a>
-    </strong>
+  <!-- FRANJA SUPERIOR -->
+  <div class="top">
+    <div class="container">
+      <span>⌖ Bogotá D.C. y Cundinamarca</span>
+      <span>☎ 314 623 3493 · Atención para asambleas</span>
+    </div>
   </div>
-</div>
-<div class="detail"><b>◷</b><div><small>Contacto</small><strong>Ing. Sergio Ramírez</strong></div></div></div>
-<div class="contact-action reveal"><h3>Solicite su cotización</h3><p>Envíenos la fecha de su asamblea, el lugar y los servicios que necesita. Le responderemos para conocer los detalles.</p><a class="btn" href="https://wa.me/573146233493?text=Hola,%20quiero%20cotizar%20los%20servicios%20para%20una%20asamblea" target="_blank" rel="noopener">Contactar por WhatsApp ↗</a></div></div></div></section>
-<footer><div class="container footer"><span>© 2026 Asambleas Integral · Ing. Sergio Ramírez</span><span>Servicios para propiedad horizontal · Bogotá y Cundinamarca</span></div></footer>
-<script>
-const t = document.getElementById("toggle"), l = document.getElementById("links");
 
-t.addEventListener("click", () => {
-  const o = l.classList.toggle("open");
-  t.setAttribute("aria-expanded", String(o));
-  t.textContent = o ? "×" : "☰";
-});
+  <!-- NAVEGACIÓN -->
+  <nav>
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Asambleas Integral">
+        <img src="logo-asambleas-integral.png" alt="Logo Asambleas Integral">
+      </a>
 
-l.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-  l.classList.remove("open");
-  t.setAttribute("aria-expanded", "false");
-  t.textContent = "☰";
-}));
+      <button class="toggle" id="toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
 
-const ob = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) {
-    e.target.classList.add("visible");
-    ob.unobserve(e.target);
-  }
-}), { threshold: .12 });
+      <div class="links" id="links">
+        <a href="#servicios">Servicios</a>
+        <a href="#flujo">Cómo trabajamos</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </div>
 
-document.querySelectorAll(".reveal").forEach(e => ob.observe(e));
-</script></body></html>
+      <a class="btn nav-cta"
+         href="https://wa.me/573146233493?text=Hola,%20quiero%20cotizar%20mi%20asamblea"
+         target="_blank" rel="noopener">
+        Solicitar cotización ↗
+      </a>
+    </div>
+  </nav>
+
+  <!-- PORTADA -->
+  <header class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <div class="eyebrow">Asambleas de propiedad horizontal</div>
+        <h1>Su asamblea, con tecnología y <em>respaldo profesional.</em></h1>
+        <p>Votaciones electrónicas, sonido profesional y soluciones audiovisuales para reuniones organizadas, claras y eficientes.</p>
+
+        <div class="actions">
+          <a class="btn"
+             href="https://wa.me/573146233493?text=Hola,%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20una%20asamblea"
+             target="_blank" rel="noopener">
+            Cotizar por WhatsApp ↗
+          </a>
+          <a class="btn outline" href="#servicios">Conocer servicios ↓</a>
+        </div>
+
+        <div class="points">
+          <span><b>✓</b> Más de 3 años de experiencia</span>
+          <span><b>✓</b> Sistema de votación disponible</span>
+          <span><b>✓</b> Bogotá y Cundinamarca</span>
+        </div>
+      </div>
+
+      <div class="hero-photo reveal">
+        <img src="sonido-profesional.webp" alt="Montaje de sonido profesional para una asamblea">
+        <div class="float">
+          Soluciones integrales
+          <small>Un solo equipo para su evento</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ELEMENTOS DE CONFIANZA -->
+  <div class="trust">
+    <div class="container">
+      <div><b>◉</b> Votación electrónica</div>
+      <div><b>♫</b> Sonido y proyección</div>
+      <div><b>✓</b> Experiencia en asambleas</div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="container">
+      <div class="heading reveal">
+        <div class="eyebrow">Nuestros servicios</div>
+        <h2>Todo lo que su asamblea necesita.</h2>
+        <p>Puede contratar los servicios de manera integral o elegir los apoyos que requiere su copropiedad.</p>
+      </div>
+
+      <div class="services">
+        <article class="card primary reveal">
+          <span class="num">01</span>
+          <div class="ico">▤</div>
+          <h3>Votaciones electrónicas</h3>
+          <p>Sistema de votación para asambleas con voto por cada unidad privada, resultados expresados en porcentajes e informe específico de las votaciones realizadas.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="num">02</span>
+          <div class="ico">♫</div>
+          <h3>Sonido profesional</h3>
+          <p>Alquiler de torres de sonido y micrófonos para los asistentes y el moderador, con apoyo durante el desarrollo de la asamblea.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="num">03</span>
+          <div class="ico">▣</div>
+          <h3>Videobeam y proyección</h3>
+          <p>Proyecte sus diapositivas, informes administrativos, documentos y resultados de las votaciones para que todos puedan seguir la reunión.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="num">04</span>
+          <div class="ico">◉</div>
+          <h3>Grabación de la asamblea</h3>
+          <p>Registro en video de la asamblea como respaldo audiovisual y apoyo para la consulta posterior del desarrollo del evento.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="num">05</span>
+          <div class="ico">☕</div>
+          <h3>Estación de café y refrigerios</h3>
+          <p>Consulte nuestras opciones de estación de café y refrigerios para brindar comodidad a los asistentes durante la jornada.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="num">06</span>
+          <div class="ico">✦</div>
+          <h3>Acompañamiento técnico</h3>
+          <p>Coordinación y apoyo en los servicios contratados para contribuir a que cada recurso esté listo durante la asamblea.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO TRABAJAMOS -->
+  <section class="workflow" id="flujo">
+    <div class="container workflow-grid">
+      <div class="workflow-copy reveal">
+        <div class="eyebrow" style="color:#1769e8">Organización del evento</div>
+        <h2>Así se desarrolla una asamblea.</h2>
+        <p>Planeamos la distribución de los espacios y el recorrido de los participantes para facilitar el ingreso, registro, ubicación y desarrollo de la reunión.</p>
+        <ul>
+          <li>Ingreso y check-in de los asambleístas.</li>
+          <li>Mesa de registro y orientación de asistentes.</li>
+          <li>Mesa de administración y moderador.</li>
+          <li>Proyección de información y resultados.</li>
+          <li>Punto de control de votaciones y sonido principal.</li>
+        </ul>
+        <p><strong>Una operación coordinada ayuda a que cada asistente sepa dónde dirigirse y cada equipo cumpla su función.</strong></p>
+      </div>
+
+      <div class="map reveal">
+        <img src="mapa-general-asamblea.jpeg" alt="Mapa general de distribución y flujo de asistentes en una asamblea">
+        <div class="caption">Mapa general ilustrativo de la distribución de una asamblea y el flujo de sus asistentes.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia">
+    <div class="container">
+      <div class="heading reveal">
+        <div class="eyebrow">Experiencia en propiedad horizontal</div>
+        <h2>Asambleas que hemos acompañado.</h2>
+        <p>Hemos prestado nuestros servicios en diferentes conjuntos y proyectos residenciales. Agradecemos la confianza depositada en nuestro trabajo.</p>
+      </div>
+
+      <div class="places">
+        <div class="place reveal"><b>✓</b> Parque Residencial Surbana IV</div>
+        <div class="place reveal"><b>✓</b> Conjunto Residencial Piedra Ancha</div>
+        <div class="place reveal"><b>✓</b> Conjunto Residencial Mirador de Castilla II</div>
+        <div class="place reveal"><b>✓</b> Conjunto Residencial Valles de Ipanema</div>
+        <div class="place reveal"><b>✓</b> Conjunto Residencial Parques de Timiza</div>
+        <div class="place reveal"><b>✓</b> Conjunto Residencial Nueva Santa Isabel, etapas I y II</div>
+        <div class="place reveal"><b>✓</b> Cumbres de San Mateo</div>
+        <div class="place reveal"><b>✓</b> Parques de la Estación</div>
+        <div class="place reveal"><b>✓</b> Conjunto Residencial Portal Américas H</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <div class="heading reveal">
+        <div class="eyebrow">Experiencias con nosotros</div>
+        <h2>El respaldo también se ve.</h2>
+        <p>Imágenes de nuestros montajes y de la organización de los espacios para asambleas.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-card reveal">
+          <img src="sonido-profesional.webp" alt="Montaje real de sonido profesional">
+          <div>
+            <strong>Montaje de sonido profesional</strong>
+            <p>Torres de sonido, micrófonos y consola para el desarrollo de la asamblea.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal">
+          <img src="mapa-general-asamblea.jpeg" alt="Mapa general del flujo de una asamblea">
+          <div>
+            <strong>Planeación y flujo de asistentes</strong>
+            <p>Organización de ingreso, registro, moderación y apoyo técnico.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal">
+          <img src="pepito.jpeg" alt="Fotografía de una experiencia de asamblea">
+          <div>
+            <strong>Experiencia en asambleas</strong>
+            <p>Registro fotográfico de nuestros servicios y montajes.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal">
+          <img src="pepita.jpg" alt="Fotografía de una experiencia de asamblea">
+          <div>
+            <strong>Servicio para copropiedades</strong>
+            <p>Momentos de trabajo y acompañamiento durante las asambleas.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="heading reveal">
+        <div class="eyebrow">Contacto</div>
+        <h2>Hablemos de su próxima asamblea.</h2>
+        <p>Atendemos conjuntos y copropiedades en Bogotá D.C. y Cundinamarca.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Atención personalizada</h3>
+          <p>Conozca nuestros servicios y consulte disponibilidad para su evento.</p>
+
+          <div class="detail">
+            <b>✆</b>
+            <div>
+              <small>Teléfono y WhatsApp</small>
+              <strong>314 623 3493</strong>
+            </div>
+          </div>
+
+          <div class="detail">
+            <b>✉</b>
+            <div>
+              <small>Correo electrónico</small>
+              <strong><a href="mailto:asambleas.integral@gmail.com">asambleas.integral@gmail.com</a></strong>
+            </div>
+          </div>
+
+          <div class="detail">
+            <b>⌖</b>
+            <div>
+              <small>Cobertura</small>
+              <strong>Bogotá D.C. y Cundinamarca</strong>
+            </div>
+          </div>
+
+          <div class="detail">
+            <b>◷</b>
+            <div>
+              <small>Contacto</small>
+              <strong>Ing. Sergio Ramírez</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-action reveal">
+          <h3>Solicite su cotización</h3>
+          <p>Envíenos la fecha de su asamblea, el lugar y los servicios que necesita. Le responderemos para conocer los detalles.</p>
+          <a class="btn"
+             href="https://wa.me/573146233493?text=Hola,%20quiero%20cotizar%20los%20servicios%20para%20una%20asamblea"
+             target="_blank" rel="noopener">
+            Contactar por WhatsApp ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="container footer">
+      <span>© 2026 Asambleas Integral · Ing. Sergio Ramírez</span>
+      <span>Servicios para propiedad horizontal · Bogotá y Cundinamarca</span>
+    </div>
+  </footer>
+
+  <!-- FUNCIONES DEL MENÚ Y ANIMACIONES -->
+  <script>
+    const toggleButton = document.getElementById("toggle");
+    const navigationLinks = document.getElementById("links");
+
+    toggleButton.addEventListener("click", () => {
+      const isOpen = navigationLinks.classList.toggle("open");
+
+      toggleButton.setAttribute("aria-expanded", String(isOpen));
+      toggleButton.textContent = isOpen ? "×" : "☰";
+    });
+
+    navigationLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navigationLinks.classList.remove("open");
+        toggleButton.setAttribute("aria-expanded", "false");
+        toggleButton.textContent = "☰";
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>
